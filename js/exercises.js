@@ -31,8 +31,31 @@ function max(num1, num2) {
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
+  function isVowel(argument){
 
-  function isVowel(x) {
+    var text;
+    var argument = argument.toLowerCase();
+  
+      var vowels = (['a', 'e', 'i', 'o', 'u']);
+  
+      for (var i = 0; i <= vowels.length; i++){
+          if (argument != vowels[i]) {
+              continue;
+          }
+          return true;
+      }
+      return false;
+  }
+  
+  // See if "A" is a vowel
+  var char = "A";
+  
+  if (isVowel(char)) {
+    console.log(char + " is a vowel");
+  } else {
+    console.log(char + " is not a vowel");
+  }
+  /*function isVowel(x) {
     if(x=a) {
       return true;
       //if x is vowel, is true//
@@ -42,13 +65,12 @@ function max(num1, num2) {
       return false;
     }
 
-  }
+  }*/
 
 
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
-
 
 
   // ---------------------
