@@ -32,8 +32,16 @@ function max(num1, num2) {
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
 
-  function isVowel(a) {
-    
+  function isVowel(x) {
+    if(x=a) {
+      return true;
+      //if x is vowel, is true//
+      //is true that a is vowel//
+    }
+    else {
+      return false;
+    }
+
   }
 
 
