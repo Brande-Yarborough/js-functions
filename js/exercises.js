@@ -55,13 +55,16 @@
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
-function rovarspraket (text) {
-let text = text.split(""); //pass in "dog" this will return an array of substrings as ["d", "o", "g"]
-for(let i=0; i<text.length; i++) {//starts count at 0 index; runs loop this long; adds 1 to index and for loop ends
-  //[d=0, o=1, g=2]
-
-//need help with remainder of this one
+function rovarspraket() {
+  return
 }
+  // function rovarspraket (text) {
+// let text = text.split(""); //pass in "dog" this will return an array of substrings as ["d", "o", "g"]
+// for(let i=0; i<text.length; i++) {//starts count at 0 index; runs loop this long; adds 1 to index and for loop ends
+//   [d=0, o=1, g=2]
+
+// need help with remainder of this one
+// }
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
@@ -74,7 +77,9 @@ function multiply([num1, num2, num3, num4]) {
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
-
+function reverse(str) {
+  return str.split('').reverse().join('');
+}
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
