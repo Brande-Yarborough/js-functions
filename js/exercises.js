@@ -29,6 +29,17 @@
     return Math.max(num1, num2, num3);
     //Math.max will return the largest of three numbers//
   }
+  //function maxOfThree(num1, num2, num3) {
+    if(num1 > num2 && num1 > num3) {
+      return num1;
+    }
+    else if(num2 > num3) {
+      return num2;
+    }
+    else {
+      return num3;
+    }
+  }
 
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
@@ -68,15 +79,22 @@
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
-  function rovarspraket() {
-    return;
+  function rovarspraket(text) {
+    text = text.split(""); //'happy'.split(""); //['h', 'a', 'p', 'p', 'y']
+
+    for (let i = 0; i < text.length; i++) {
+      if("bcdfghjklmnpqrstvwxyz".includes(text[i])) {
+        text[i] = text[i] + "o" + text[i];
+      }
+    }
+    return text.join("");
   }
-  // function rovarspraket (text) {
-  // let text = text.split(""); //pass in "dog" this will return an array of substrings as ["d", "o", "g"]
-  // for(let i=0; i<text.length; i++) {//starts count at 0 index; runs loop this long; adds 1 to index and for loop ends
+  
+  //pass in "dog" this will return an array of substrings as ["d", "o", "g"]
+  // {//starts count at 0 index; runs loop this long; adds 1 to index and for loop ends
   //   [d=0, o=1, g=2]
 
-  // need help with remainder of this one
+  
   // }
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
@@ -90,6 +108,23 @@
   function multiply([num1, num2, num3, num4]) {
     return num1 * num2 * num3 * num4;
   }
+
+  //function sum(arr) {
+   // let sum=0;
+
+   // for(let i = 0; i < arr.length; i++) {
+    //  sum = sum + arr[i];
+  //  }
+//return sum;
+ 
+//function multiply(arr) {
+ // let product = 
+
+  //for(let i = 0; i < arr.length; i++) {
+    //product = product * arr[i];
+ // }
+ // return product;
+//}
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
@@ -151,6 +186,9 @@
     }
     return obj;
   }
+
+  
+  
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
   ////////////////////////////////////////////////////////////////////////
