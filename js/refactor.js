@@ -33,7 +33,9 @@ function doSomethingCool() {
 
 // Put your answer below -------------------------
 
-
+(function () { //wrap anonymous function in parentheses
+  console.log("Something Cool!");
+}) (); //follow with parentheses-this will invoke function that was returned
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -53,7 +55,11 @@ setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
 
+(function () {
+  alert("Hello World!");
+}) ();
 
+setTimeout(sayHi, 2000);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -82,7 +88,8 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-
+// [c]: z then y
+//because y has the setTimeout function, z will run first.
 
 // -----------------------------------------------
 
@@ -104,9 +111,9 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-
-
-
+var reverseStr = function(str) {
+return str.split("").reverse().join(""); 
+}
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -139,7 +146,17 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
+const colorCode = { //create object with key value pairs
+  rojo: "#ff0000",
+  blanco: "#ffffff",
+  azul: "#0000ff",
+  verde: "#00ff00",
+  negro: "000000"
+}
+const spanishColor= function(colorName) {
+  return colors[colorCode] //return colors
 
+}
 
 
 // -----------------------------------------------
@@ -157,7 +174,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-
+let foo;//declaration
+foo = "bar";
 
 // -----------------------------------------------
 
@@ -181,7 +199,10 @@ var callTenTimes = function(callback) {
 // callTenTime(functionName);
 
 // Put your answer below -------------------------
-
+const callNtimes = function(callback, n) {
+  const range = Array.from(Array(n).keys());
+  range.forEach(callback);
+}; //could I keep var here instead of using const?
 
 // -----------------------------------------------
 
@@ -209,7 +230,17 @@ var decreaseScore = function() {
 };
 
 // Put your answer below -------------------------
+function () {
+  var score = 0;
 
+var increaseScore = function() {
+  score++;
+};
+
+var decreaseScore = function() {
+  score--;
+};
+}
 
 
 // -----------------------------------------------
@@ -230,7 +261,11 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
+var addNumbers = function(numberA, numberB) {
+  return (numberA + numberB);
+};
 
+var twoPlusTwo = addNumbers(2,2);
 
 
 // -----------------------------------------------
@@ -257,8 +292,12 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+//no parameter given means amount equal to undefined. number+undefined=NaN
+var speed = 0;
 
-
+var accelerate = function(amount = 1) {
+  speed += amount;
+};
 
 // -----------------------------------------------
 
