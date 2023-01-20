@@ -33,9 +33,9 @@ function doSomethingCool() {
 
 // Put your answer below -------------------------
 
-(function () { //wrap anonymous function in parentheses
+const doSomethingCool = function () { //wrap anonymous function in parentheses
   console.log("Something Cool!");
-}) (); //follow with parentheses-this will invoke function that was returned
+}; //follow with parentheses-this will invoke function that was returned
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -55,11 +55,9 @@ setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
 
-(function () {
+setTimeout(function () {
   alert("Hello World!");
-}) ();
-
-setTimeout(sayHi, 2000);
+}, 2000);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -154,7 +152,7 @@ const colorCode = { //create object with key value pairs
   negro: "000000"
 }
 const spanishColor= function(colorName) {
-  return colors[colorCode] //return colors
+  return colorCode[colorName] //return colors
 
 }
 
