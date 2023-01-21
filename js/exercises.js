@@ -29,7 +29,7 @@
     return Math.max(num1, num2, num3);
     //Math.max will return the largest of three numbers//
   }
-  //function maxOfThree(num1, num2, num3) {
+  function maxOfThree(num1, num2, num3) {
     if(num1 > num2 && num1 > num3) {
       return num1;
     }
@@ -49,20 +49,14 @@
   //returns true or false
   function isVowel(letter) {
     let result; //let is initializing variable//
-    if (
-      letter === "a" ||
-      letter === "e" ||
-      letter === "i" ||
-      letter === "o" ||
-      letter === "u"
-    ) {
+    if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
       //letter is what is getting passed into function. comparing that to each vowel//
       result = true;
     } else {
       result = false;
     }
     return result; //result of if else statement//
-  }
+  };
 
   /*function isVowel(x) {
     if(x=a) {
@@ -88,7 +82,7 @@
       }
     }
     return text.join("");
-  }
+  };
   
   //pass in "dog" this will return an array of substrings as ["d", "o", "g"]
   // {//starts count at 0 index; runs loop this long; adds 1 to index and for loop ends
@@ -104,10 +98,10 @@
   //returns number
   function sum([num1, num2, num3, num4]) {
     return num1 + num2 + num3 + num4;
-  }
+  };
   function multiply([num1, num2, num3, num4]) {
     return num1 * num2 * num3 * num4;
-  }
+  };
 
   //function sum(arr) {
    // let sum=0;
@@ -133,7 +127,7 @@
   //returns string
   function reverse(str) {
     return str.split("").reverse().join(""); //did this in my codewars day 1
-  }
+  };
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
@@ -149,7 +143,7 @@
       }
     }
     return length;
-  }
+  };
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
@@ -166,7 +160,7 @@
       }
     }
     return words;
-  }
+  };
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
@@ -185,10 +179,10 @@
       }
     }
     return obj;
-  }
+  };
 
   
-  
+
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
   ////////////////////////////////////////////////////////////////////////
@@ -261,4 +255,4 @@
   console.assert(charFreq("abbabcbdbabdbdbabababcbcbab").c === 3);
 
   console.assert(charFreq("abbabcbdbabdbdbabababcbcbab").d === 3);
-})();
+});
